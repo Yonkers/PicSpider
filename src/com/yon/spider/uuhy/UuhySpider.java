@@ -23,7 +23,7 @@ import org.jsoup.select.Elements;
 public class UuhySpider {
 	public void spide(String url) {
 		try {
-			Document doc = Jsoup.connect(url).timeout(20000).get();
+                Document doc = Jsoup.connect(url).timeout(20000).get();
 //			Elements els = doc.getElementsByAttributeValue("class", "mod-img");
 			Elements sections = doc.getElementsByAttributeValue("class", "content");
 			int size = sections.size();
@@ -34,13 +34,13 @@ public class UuhySpider {
 			int imgCount = img.size();
 			if(imgCount == 0) return;
 			ArticleDetail detail = new ArticleDetail();
-			List<Picture> pics = new ArrayList<Picture>();
+			List<UuhyPicture> pics = new ArrayList<UuhyPicture>();
 			Node elImg;
-			Picture pic ;
+			UuhyPicture pic ;
 			for(int i=0;i< imgCount;i++){
 				elImg = img.get(i);
 				if(!elImg.hasAttr("width") || !elImg.hasAttr("height")) continue;
-				pic = new Picture();
+				pic = new UuhyPicture();
 				pic.setUrl(elImg.attr("src"));
 				pic.setWidth(Integer.parseInt(elImg.attr("width")));
 				pic.setHeight(Integer.parseInt(elImg.attr("height")));

@@ -6,26 +6,15 @@
  */
 package com.yon.spider.uuhy;
 
+import com.yon.spider.base.Picture;
+
 /**
  * @author yonkers
  */
-public class Picture {
+public class UuhyPicture extends Picture{
 
-	private String url;
 	private int width;
 	private int height;
-	/**
-	 * @return the url
-	 */
-	public String getUrl() {
-		return url;
-	}
-	/**
-	 * @param url the url to set
-	 */
-	public void setUrl(String url) {
-		this.url = url;
-	}
 	/**
 	 * @return the width
 	 */
@@ -53,7 +42,7 @@ public class Picture {
 	
 	@Override
 	public String toString() {
-		return "Picture [url=" + url + ", width=" + width + ", height="
+		return "UuhyPicture [url=" + url + ", width=" + width + ", height="
 				+ height + "]";
 	}
 

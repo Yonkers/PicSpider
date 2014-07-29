@@ -16,7 +16,7 @@ public class ArticleDetail {
 	
 	private String describe;
 	
-	private List<Picture> pictures;
+	private List<UuhyPicture> pictures;
 
 	/**
 	 * @return the describe
@@ -35,14 +35,14 @@ public class ArticleDetail {
 	/**
 	 * @return the pictures
 	 */
-	public List<Picture> getPictures() {
+	public List<UuhyPicture> getPictures() {
 		return pictures;
 	}
 
 	/**
 	 * @param pictures the pictures to set
 	 */
-	public void setPictures(List<Picture> pictures) {
+	public void setPictures(List<UuhyPicture> pictures) {
 		this.pictures = pictures;
 	}
 
